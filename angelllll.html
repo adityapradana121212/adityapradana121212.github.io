@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pujian Cantik Interaktif</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f8ff;
+            margin: 0;
+        }
+        .container {
+            text-align: center;
+            background-color: #ffcccb;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+            width: 300px;
+        }
+        h1 {
+            color: #e60073;
+            font-size: 2em;
+        }
+        input {
+            padding: 10px;
+            font-size: 1em;
+            width: 80%;
+            margin-bottom: 15px;
+            border: none;
+            border-radius: 5px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 1em;
+            background-color: #e60073;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #cc005c;
+        }
+        .output {
+            margin-top: 20px;
+            font-size: 1.2em;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Message</h1>
+        <input type="text" id="nameInput" placeholder="Masukkan namamu...">
+        <button onclick="showCompliment()">Enter!</button>
+        <div class="output" id="outputMessage"></div>
+    </div>
+
+    <script>
+        function showCompliment() {
+            var name = document.getElementById('nameInput').value;
+            var message = name ? name + ", kaoo cantik banget hari ini!" : "Cantikk ajaaa!";
+            document.getElementById('outputMessage').innerText = message;
+        }
+    </script>
+
+</body>
+</html>
